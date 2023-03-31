@@ -24,6 +24,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/bootstrap.min.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/owl.carousel.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/animate-text.css');
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/animate.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/magnific-popup.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/et-line.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/pe-icon-7-stroke.css');
@@ -67,7 +68,9 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 </p>
 <![endif]-->
 
-<!-- Линия с контактами -->
+<!-- Шапка сайта (меню) -->
+<header id="sticky-header" class="header-area header-wrapper <?= ($APPLICATION->GetCurDir() === '/') ? "transparent-header" : "white-bg" ?>"  >
+ <!-- Линия с контактами -->
 <?php if ($APPLICATION->GetCurDir() !== '/'): ?>
 <div class="header-top-area bg-color ptb-10 hidden-xs">
     <div class="container">
@@ -93,9 +96,8 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
     </div>
 </div>
 <?php endif; ?>
-<!-- Шапка сайта (меню) -->
-<header id="sticky-header" class="header-area header-wrapper <?= ($APPLICATION->GetCurDir() === '/') ? "transparent-header" : "white-bg" ?>  >
-    <!-- Меню (для десктопа) -->
+
+ <!-- Меню (для десктопа) -->
     <div class="header-middle-area full-width">
         <div class="container">
             <div class="full-width-mega-dropdown">
