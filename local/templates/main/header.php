@@ -20,37 +20,40 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
     <!-- Шрифты -->
     <!-- google fonts -->
     
-	<?$APPLICATION->ShowHead();?>
-	<?php
-		Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/css/bootstrap.min.css");
-		Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/css/owl.carousel.css");
-		Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/css/animate-text.css");
-		Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/css/magnific-popup.css");
-		Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/css/et-line.css");
-		Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/css/pe-icon-7-stroke.css");
-		Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/css/shortcode/shortcodes.css");
-		Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/css/meanmenu.min.css");
-		Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/css/font-awesome.min.css");
-		Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/style.css");
-		Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/css/responsive.css");
+    <?php
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/bootstrap.min.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/owl.carousel.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/animate-text.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/magnific-popup.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/et-line.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/pe-icon-7-stroke.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/shortcode/shortcodes.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/meanmenu.min.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/font-awesome.min.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/font-awesome.min.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/style.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/responsive.css');
 
-		Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/assets/js/vendor/modernizr-2.8.3.min.js");
-		Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/js/vendor/jquery-1.12.0.min.js");
-		Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/js/bootstrap.min.js");
-		Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/js/owl.carousel.min.js");
-		Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/js/jquery.counterup.min.js");
-		Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/js/waypoints.min.js");
-		Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/js/jquery.magnific-popup.min.js");
-		Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/js/jquery.mixitup.min.js");
-		Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/js/jquery.meanmenu.js");
-		Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/js/jquery.nav.js");
-		Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/js/jquery.parallax-1.1.3.js");
-		Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/js/animate-text.js");
-		Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/js/plugins.js");
-		Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/js/main.js");
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/vendor/modernizr-2.8.3.min.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/vendor/jquery-1.12.0.min.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/bootstrap.min.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/owl.carousel.min.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/jquery.counterup.min.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/waypoints.min.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/jquery.magnific-popup.min.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/jquery.mixitup.min.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/jquery.meanmenu.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/jquery.nav.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/jquery.parallax-1.1.3.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/animate-text.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/plugins.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/main.js');
 
-		Asset::getInstance()->addString('<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">');
-	?>
+    Asset::getInstance()
+        ->addString('<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">');
+    ?>
+
+    <? $APPLICATION->ShowHead(); ?>
 
 	
 </head>
@@ -65,6 +68,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 <![endif]-->
 
 <!-- Линия с контактами -->
+<?php if ($APPLICATION->GetCurDir() !== '/'): ?>
 <div class="header-top-area bg-color ptb-10 hidden-xs">
     <div class="container">
         <div class="row">
@@ -88,9 +92,9 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         </div>
     </div>
 </div>
-
+<?php endif; ?>
 <!-- Шапка сайта (меню) -->
-<header id="sticky-header" class="header-area header-wrapper white-bg">
+<header id="sticky-header" class="header-area header-wrapper <?= ($APPLICATION->GetCurDir() === '/') ? "transparent-header" : "white-bg" ?>  >
     <!-- Меню (для десктопа) -->
     <div class="header-middle-area full-width">
         <div class="container">
@@ -196,6 +200,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 </header>
 
 <!-- Хлебные крошки (навигация) -->
+<?php if ($APPLICATION->GetCurDir() !== '/'): ?>
 <div class="breadcrumb-area brand-bg ptb-100">
     <div class="container width-100">
         <div class="row z-index">
@@ -218,4 +223,5 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
             </div>
         </div>
     </div>
-</div>						
+</div>
+<?php endif;?>						
