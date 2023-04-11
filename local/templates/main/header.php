@@ -75,10 +75,31 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 <div class="header-top-area bg-color ptb-10 hidden-xs">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-sm-6">
+        <div class="col-md-6 col-sm-6">
                 <div class="welcome">
-                    <span><i class="fa fa-envelope"></i> admin@domain.com</span>
-                    <span><i class="fa fa-phone"></i> +012 345 6789</span>
+                    <span>
+                        <i class="fa fa-envelope"></i>
+                        <?$APPLICATION->IncludeComponent(
+                            "bitrix:main.include",
+                            "",
+                            Array(
+                                "AREA_FILE_SHOW" => "file",
+                                "PATH" => SITE_TEMPLATE_PATH ."/includes/header_email.php"
+                            )
+                        );?>
+                    </span>
+
+                    <span>
+                        <i class="fa fa-phone"></i>
+                        <?$APPLICATION->IncludeComponent(
+                            "bitrix:main.include",
+                            "",
+                            Array(
+                                "AREA_FILE_SHOW" => "file",
+                                "PATH" => SITE_TEMPLATE_PATH ."/includes/header_phone.php"
+                            )
+                        );?>
+                    </span>
                 </div>
             </div>
             <div class="col-md-6 col-sm-6">
