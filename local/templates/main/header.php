@@ -116,7 +116,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                         <!-- Меню (основное) -->
                         <? $APPLICATION->IncludeComponent(	
 							"bitrix:menu", /*myComponents(имя разработчика компонентов):menu(имя компонентар)*/
-							"top_menu", [
+							"right_menu", [
 								"ALLOW_MULTI_SELECT"    => "N",
 								"CHILD_MENU_TYPE"       => "left",
 								"DELAY"                 => "N",
@@ -127,7 +127,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 								"MENU_CACHE_USE_GROUPS" => "N",
 								"ROOT_MENU_TYPE"        => "top",
 								"USE_EXT"               => "N",
-								"COMPONENT_TEMPLATE"    => "top_menu",
+								"COMPONENT_TEMPLATE"    => "right_menu",
                         	], false); 
 						?>
 
