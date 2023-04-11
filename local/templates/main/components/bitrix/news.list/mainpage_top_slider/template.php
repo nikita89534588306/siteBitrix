@@ -12,6 +12,13 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
+<?php 
+foreach ($arResult["ITEMS"] as $arItem){
+    echo "<pre>";
+    var_dump($arItem["PREVIEW_PICTURE"]["SRC"]);
+    echo "</pre>";
+}
+?>
 
 <?php if ($arResult["ITEMS"]): ?>
     <section class="slider-area">
@@ -31,7 +38,7 @@ $this->setFrameMode(true);
                         <h2><?= isset($arItem['PREVIEW_TEXT']) ? $arItem['PREVIEW_TEXT'] : ''; ?></h2>
 
                         <?php if (!empty($arItem["DISPLAY_PROPERTIES"]['LINK']['VALUE'])): ?>
-                            <a class="my-button" href="<?= $arItem["DISPLAY_PROPERTIES"]['link']['VALUE'] ?>">
+                            <a class="my-button" href="<?= $arItem["DISPLAY_PROPERTIES"]['LINK']['VALUE'] ?>">
                                 <?= isset($arItem['DETAIL_TEXT']) ? $arItem['DETAIL_TEXT'] : ''; ?>
                             </a>
                         <?php endif; ?>
