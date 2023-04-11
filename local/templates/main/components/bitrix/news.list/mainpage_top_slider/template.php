@@ -12,13 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<?php 
-foreach ($arResult["ITEMS"] as $arItem){
-    echo "<pre>";
-    var_dump($arItem["PREVIEW_PICTURE"]["SRC"]);
-    echo "</pre>";
-}
-?>
+
 
 <?php if ($arResult["ITEMS"]): ?>
     <section class="slider-area">
