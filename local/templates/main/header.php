@@ -69,7 +69,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 <![endif]-->
 
 <!-- Шапка сайта (меню) -->
-<header id="sticky-header" class="header-area header-wrapper <?= ($APPLICATION->GetCurDir() === '/') ? "transparent-header" : "white-bg" ?>"  >
+
  <!-- Линия с контактами -->
 <?php if ($APPLICATION->GetCurDir() !== '/'): ?>
 <div class="header-top-area bg-color ptb-10 hidden-xs">
@@ -119,6 +119,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 <?php endif; ?>
 
  <!-- Меню (для десктопа) -->
+ <header id="sticky-header" class="header-area header-wrapper <?= ($APPLICATION->GetCurDir() === '/') ? "transparent-header" : "white-bg" ?>"  >
     <div class="header-middle-area full-width">
         <div class="container">
             <div class="full-width-mega-dropdown">
